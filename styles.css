@@ -16,7 +16,25 @@
     color: #07f000;
 }
 
-.row .col input{
-    display:block;
-    margin: 0 auto;
+
+.slider-container {
+    width: 100%; /* Width of the outside container */
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: rgba(0,255,0,0.4); /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 5px;  
+
+  }
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
 }

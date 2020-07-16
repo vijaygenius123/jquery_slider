@@ -30,16 +30,19 @@
         <div class="row content">
             <div class="col">
                 <i class="fa fa-leaf" aria-hidden="true" data-weeks="1"></i>
-                <i class="fa fa-battery-full" aria-hidden="true" data-weeks="2"></i>
-                <i class="fa fa-glass" aria-hidden="true" data-weeks="3"></i>
-                <i class="fa fa-archive" aria-hidden="true" data-weeks="4"></i>
+
+                <i class="fa fa-glass" aria-hidden="true" data-weeks="4"></i>
+                <i class="fa fa-archive" aria-hidden="true" data-weeks="3"></i>
+                <i class="fa fa-battery-full" aria-hidden="true" data-weeks="4"></i>
             </div>
         </div>
 
         <!-- Slider -->
         <div class="row">
             <div class="col">
-                <input type="range" min="0" max="4" value="0" id="slider">
+                <div class="slider-container">
+                    <input type="range" min="0" max="4" value="0" id="slider" class="slider">
+                </div>
             </div>
         </div>
 
@@ -63,10 +66,14 @@
 
             $('#slider').on('change', function (e) {
                 let weeks = e.target.value
+
                 $('i').filter(function () {
                     console.log()
                     return $(this).attr('data-weeks') <= weeks
-                }).css('display', 'block')
+                }).css({
+                    'display': 'block',
+                    'opacity': $(this).attr('data-weeks') / 4
+                })
 
                 $('i').filter(function () {
                     console.log()
