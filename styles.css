@@ -1,0 +1,22 @@
+.content{
+    min-height: 50vh;
+}
+
+
+.content .col{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content i{
+    font-size: 10rem;
+    display: none;
+    margin: 10px;
+    color: #07f000;
+}
+
+.row .col input{
+    display:block;
+    margin: 0 auto;
+}
